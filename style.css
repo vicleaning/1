@@ -22,12 +22,14 @@ header {
     display: flex;
     align-items: center;
     gap: 25px;
+    flex-wrap: nowrap;
 }
 
 .logo {
     height: 180px;
     width: auto;
     object-fit: contain;
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -40,6 +42,7 @@ header {
     font-size: 36px;
     color: #FFD700;
     font-weight: 700;
+    text-align: left;
 }
 
 /* Меню */
@@ -99,6 +102,14 @@ h2 {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     margin-bottom: 25px;
+}
+
+.service-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
 }
 
 .service-list {
