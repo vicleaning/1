@@ -17,7 +17,7 @@ header {
     box-shadow: 0 6px 15px rgba(0,0,0,0.7);
 }
 
-/* Логотип и слоган */
+/* Лого и слоган справа */
 .logo-container {
     display: flex;
     align-items: center;
@@ -85,47 +85,35 @@ h2 {
 }
 
 /* Блоки услуг */
-.service-gold {
-    background-color: #000000;
+.service-block {
+    background-color: #000;
     color: #FFD700;
-    margin-bottom: 60px;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
 
-.service-gold h3 {
+.service-block h3 {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     margin-bottom: 25px;
 }
 
-.service-gold ul {
-    list-style: disc inside;
-    line-height: 1.9;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-}
-
-/* Изображения услуг */
-.service-gold img {
-    max-width: 100%;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    transition: transform 0.3s ease;
-}
-
-.service-gold img:hover {
-    transform: scale(1.03);
+.service-list {
+    list-style-type: disc;
+    padding-left: 25px;
+    line-height: 1.8;
+    font-size: 18px;
 }
 
 /* Галерея работ */
 .works-gallery {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 40px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .works-gallery img, .works-gallery video {
@@ -143,7 +131,7 @@ video {
     display: block;
 }
 
-/* Подвал / Контакты */
+/* Контакты */
 footer {
     background-color: #000000;
     color: #FFD700;
@@ -191,12 +179,10 @@ footer .social-buttons {
         flex-direction: column;
         align-items: center;
     }
-    .logo {
-        height: 90px;
-    }
     .slogan {
         font-size: 22px;
         margin-top: 10px;
+        text-align: center;
     }
     header nav {
         gap: 15px;
@@ -207,5 +193,8 @@ footer .social-buttons {
     }
     .works-gallery img, .works-gallery video {
         width: 90%;
+    }
+    .service-block {
+        padding: 20px;
     }
 }
