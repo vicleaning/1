@@ -3,32 +3,32 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #5C4500;
-    color: #FFD700;
+    background-color: #5C4500; /* золотисто-коричневый фон */
+    color: #FFD700; /* золотой текст */
 }
 
-/* Шапка */
+/* ----------------- Шапка ----------------- */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 50px;
     background-color: #000000;
     box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+    padding: 20px 50px;
 }
 
-/* Лого и слоган справа */
+/* Лого + слоган */
 .logo-container {
     display: flex;
-    align-items: center;
-    gap: 25px;
+    align-items: center; /* вертикальное выравнивание */
+    gap: 25px; /* отступ между лого и слоганом */
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .logo {
-    height: 180px;
+    height: 180px; /* можно подкорректировать */
     width: auto;
-    object-fit: contain;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -40,8 +40,8 @@ header {
 .slogan {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
-    color: #FFD700;
     font-weight: 700;
+    color: #FFD700;
     text-align: left;
 }
 
@@ -73,7 +73,7 @@ header nav {
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
-/* Основной контент */
+/* ----------------- Основной контент ----------------- */
 main {
     padding: 50px;
 }
@@ -89,7 +89,7 @@ h2 {
 
 /* Блоки услуг */
 .service-block {
-    background-color: #000;
+    background-color: #000000;
     color: #FFD700;
     margin: 40px auto;
     padding: 25px;
@@ -119,7 +119,7 @@ h2 {
     font-size: 18px;
 }
 
-/* Галерея работ */
+/* ----------------- Галерея работ ----------------- */
 .works-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -142,7 +142,7 @@ video {
     display: block;
 }
 
-/* Контакты */
+/* ----------------- Контакты ----------------- */
 footer {
     background-color: #000000;
     color: #FFD700;
@@ -175,7 +175,7 @@ footer .social-buttons {
     transform: translateY(-3px);
 }
 
-/* Адаптив */
+/* ----------------- Адаптив ----------------- */
 @media screen and (max-width: 1200px) {
     .logo {
         height: 140px;
@@ -187,13 +187,13 @@ footer .social-buttons {
 
 @media screen and (max-width: 768px) {
     .logo-container {
-        flex-direction: column;
+        flex-direction: column; /* слоган под лого */
         align-items: center;
     }
     .slogan {
         font-size: 22px;
-        margin-top: 10px;
         text-align: center;
+        margin-top: 10px;
     }
     header nav {
         gap: 15px;
