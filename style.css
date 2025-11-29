@@ -21,13 +21,13 @@ header {
 .logo-container {
     display: flex;
     align-items: center; /* вертикальное выравнивание */
-    gap: 25px; /* отступ между лого и слоганом */
-    flex-wrap: nowrap;
+    gap: 15px;           /* расстояние между лого и слоганом */
+    flex-wrap: wrap;      /* разрешаем переносить при необходимости */
     justify-content: center;
 }
 
 .logo {
-    height: 180px; /* можно подкорректировать */
+    height: 120px; /* можно подкорректировать */
     width: auto;
     display: block;
     transition: transform 0.3s ease;
@@ -39,7 +39,7 @@ header {
 
 .slogan {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;
+    font-size: 20px; /* уменьшено для мобильных */
     font-weight: 700;
     color: #FFD700;
     text-align: left;
@@ -178,22 +178,23 @@ footer .social-buttons {
 /* ----------------- Адаптив ----------------- */
 @media screen and (max-width: 1200px) {
     .logo {
-        height: 140px;
+        height: 100px;
     }
     .slogan {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 768px) {
+    /* На мобильных слоган теперь справа, а не под лого */
     .logo-container {
-        flex-direction: column; /* слоган под лого */
-        align-items: center;
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px;
     }
     .slogan {
-        font-size: 22px;
-        text-align: center;
-        margin-top: 10px;
+        font-size: 16px;
     }
     header nav {
         gap: 15px;
