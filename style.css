@@ -27,7 +27,7 @@ header {
 }
 
 .logo {
-    height: 120px; /* можно подкорректировать */
+    height: 360px; /* можно подкорректировать */
     width: auto;
     display: block;
     transition: transform 0.3s ease;
