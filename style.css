@@ -21,28 +21,48 @@ header {
 .logo-container {
     display: flex;
     align-items: center; /* вертикальное выравнивание */
-    gap: 15px;           /* расстояние между лого и слоганом */
+    gap: 20px;           /* расстояние между лого и текстом */
+    justify-content: flex-start; /* логотип слева */
     flex-wrap: wrap;      /* разрешаем переносить при необходимости */
-    justify-content: center;
 }
 
-.logo {
-    height: 360px; /* можно подкорректировать */
-    width: auto;
-    display: block;
-    transition: transform 0.3s ease;
+/* Текст рядом с логотипом */
+.logo-text {
+    max-width: 600px; /* ограничение ширины текста */
+    opacity: 0; /* скрываем до анимации */
+    animation: fadeIn 1.5s ease forwards; /* 1.5 секунды */
 }
 
-.logo:hover {
-    transform: scale(1.05);
-}
-
-.slogan {
+.logo-text h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 20px; /* уменьшено для мобильных */
+    font-size: 28px;
     font-weight: 700;
     color: #FFD700;
-    text-align: left;
+    margin: 0 0 10px 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.logo-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #FFD700;
+    margin: 0;
+    line-height: 1.5;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Меню */
@@ -180,21 +200,20 @@ footer .social-buttons {
     .logo {
         height: 100px;
     }
-    .slogan {
-        font-size: 18px;
+    .logo-text h1 {
+        font-size: 24px;
+    }
+    .logo-text p {
+        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* На мобильных слоган теперь справа, а не под лого */
     .logo-container {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 10px;
-    }
-    .slogan {
-        font-size: 16px;
     }
     header nav {
         gap: 15px;
